@@ -895,9 +895,9 @@ def main():
                             password = st.session_state.get('user_password', '')
                             if password:
                                 with st.spinner(f"Decrypting video {video_idx + 1}..."):
-                                    decrypted_path = decrypt_video(video_path, password)
-                                    if decrypted_path:
-                                        st.session_state[f"decrypted_{video_key}"] = decrypted_path
+                                    decrypted_bytes = decrypt_video(video_path, password)
+                                    if decrypted_bytes:
+                                        st.session_state[f"decrypted_{video_key}"] = decrypted_bytes
                                         st.success(f"Video {video_idx + 1} decrypted successfully!")
                                     else:
                                         st.error(f"Failed to decrypt video {video_idx + 1}")
@@ -906,29 +906,23 @@ def main():
                         
                         # Display video if decrypted
                         if st.session_state[f"decrypted_{video_key}"]:
-                            decrypted_video_path = st.session_state[f"decrypted_{video_key}"]
-                            if os.path.exists(decrypted_video_path):
-                                try:
-                                    with open(decrypted_video_path, 'rb') as video_file:
-                                        video_bytes = video_file.read()
-                                    
-                                    # Display video in fixed container
-                                    st.markdown(f"""
-                                        <div class="video-container">
-                                            <div class="video-title">Video {video_idx + 1} - Cute Famu Moments! 💜</div>
-                                            <div class="video-player">
-                                    """, unsafe_allow_html=True)
-                                    
-                                    st.video(video_bytes)
-                                    
-                                    st.markdown("""
-                                            </div>
+                            decrypted_video_bytes = st.session_state[f"decrypted_{video_key}"]
+                            try:
+                                # Display video in fixed container
+                                st.markdown(f"""
+                                    <div class="video-container">
+                                        <div class="video-title">Video {video_idx + 1} - Cute Famu Moments! 💜</div>
+                                        <div class="video-player">
+                                """, unsafe_allow_html=True)
+                                
+                                st.video(decrypted_video_bytes)
+                                
+                                st.markdown("""
                                         </div>
-                                    """, unsafe_allow_html=True)
-                                except Exception as e:
-                                    st.error(f"Error loading video {video_idx + 1}: {e}")
-                            else:
-                                st.info(f"Video {video_idx + 1} decrypted but file not found")
+                                    </div>
+                                """, unsafe_allow_html=True)
+                            except Exception as e:
+                                st.error(f"Error loading video {video_idx + 1}: {e}")
                         else:
                             # Placeholder for encrypted video
                             st.markdown(f"""
