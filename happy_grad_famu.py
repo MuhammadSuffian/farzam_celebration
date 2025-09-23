@@ -30,17 +30,17 @@ def local_css():
     
     body {
         overflow-x: hidden;
-        background: linear-gradient(135deg, #d8b4fe 0%, #c084fc 50%, #a855f7 100%);
+        background: linear-gradient(135deg, #000000 0%, #1a1a2e 50%, #16213e 100%);
         min-height: 100vh;
     }
     
     .main {
-        background: linear-gradient(120deg, rgba(255, 255, 255, 0.9) 0%, rgba(240, 230, 250, 0.8) 100%);
+        background: linear-gradient(120deg, rgba(30, 30, 30, 0.9) 0%, rgba(20, 20, 40, 0.8) 100%);
         backdrop-filter: blur(10px);
     }
 
     .stApp {
-        background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(240, 230, 250, 0.85) 50%, rgba(220, 200, 250, 0.9) 100%);
+        background: linear-gradient(135deg, rgba(20, 20, 20, 0.95) 0%, rgba(25, 25, 45, 0.85) 50%, rgba(30, 30, 50, 0.9) 100%);
         backdrop-filter: blur(15px);
     }
     
@@ -97,11 +97,11 @@ def local_css():
     }
     
     .premium-container {
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        background: rgba(255, 255, 255, 0.7);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        background: rgba(30, 30, 30, 0.8);
         backdrop-filter: blur(20px);
-        box-shadow: 0 20px 40px rgba(0,0,0,0.1),
-                    inset 0 0 80px rgba(255, 255, 255, 0.5);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.3),
+                    inset 0 0 80px rgba(100, 149, 237, 0.1);
         border-radius: 30px;
         padding: 40px;
         margin: 30px 0;
@@ -117,7 +117,7 @@ def local_css():
         left: 0;
         right: 0;
         bottom: 0;
-        background: linear-gradient(45deg, rgba(100, 149, 237, 0.1), rgba(147, 112, 219, 0.1));
+        background: linear-gradient(45deg, rgba(100, 149, 237, 0.05), rgba(147, 112, 219, 0.05));
         z-index: -1;
         border-radius: 30px;
     }
@@ -189,7 +189,7 @@ def local_css():
         font-weight: 600;
         text-align: center;
         margin: 30px 0;
-        color: #333;
+        color: #e0e0e0;
     }
     
     .countdown-container {
@@ -199,14 +199,14 @@ def local_css():
     }
     
     .countdown-box {
-        background: rgba(255, 255, 255, 0.9);
-        box-shadow: 0 10px 30px rgba(168, 85, 247, 0.1);
-        color: #333;
+        background: rgba(40, 40, 40, 0.9);
+        box-shadow: 0 10px 30px rgba(168, 85, 247, 0.2);
+        color: #e0e0e0;
         padding: 25px;
         border-radius: 20px;
         min-width: 120px;
         text-align: center;
-        border: 1px solid rgba(168, 85, 247, 0.1);
+        border: 1px solid rgba(168, 85, 247, 0.3);
         backdrop-filter: blur(10px);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
@@ -230,7 +230,7 @@ def local_css():
         font-size: 1rem;
         text-transform: uppercase;
         letter-spacing: 2px;
-        color: #666;
+        color: #b0b0b0;
     }
     
     .premium-button {
@@ -331,15 +331,15 @@ def local_css():
     }
     
     .message-card {
-        background: rgba(255, 255, 255, 0.9);
+        background: rgba(30, 30, 30, 0.9);
         border-radius: 20px;
         padding: 40px;
         margin: 30px 0;
-        box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        box-shadow: 0 15px 35px rgba(0,0,0,0.3);
         font-family: 'Lato', sans-serif;
         position: relative;
         overflow: hidden;
-        border: 1px solid rgba(168, 85, 247, 0.1);
+        border: 1px solid rgba(168, 85, 247, 0.3);
     }
     
     .message-card::before {
@@ -394,15 +394,15 @@ def local_css():
     }
     
     .memory-polaroid {
-        background: white;
+        background: rgba(50, 50, 50, 0.9);
         padding: 20px 20px 70px 20px;
-        box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        box-shadow: 0 15px 35px rgba(0,0,0,0.3);
         transform: rotate(random() * 8 - 4 + deg);
         transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         position: relative;
         margin: 25px;
         border-radius: 5px;
-        border: 1px solid rgba(168, 85, 247, 0.1);
+        border: 1px solid rgba(168, 85, 247, 0.3);
     }
     
     .memory-polaroid:hover {
@@ -419,7 +419,7 @@ def local_css():
         text-align: center;
         font-family: 'Dancing Script', cursive;
         font-size: 1.5rem;
-        color: #333;
+        color: #e0e0e0;
     }
     
     .sparkle {
@@ -462,12 +462,12 @@ def local_css():
     }
     
     .video-container {
-        background: linear-gradient(145deg, rgba(216, 180, 254, 0.1), rgba(192, 132, 252, 0.1));
+        background: linear-gradient(145deg, rgba(40, 40, 40, 0.8), rgba(30, 30, 30, 0.8));
         border-radius: 20px;
         padding: 20px;
         margin: 20px 0;
-        border: 2px solid rgba(168, 85, 247, 0.2);
-        box-shadow: 0 10px 30px rgba(168, 85, 247, 0.1);
+        border: 2px solid rgba(168, 85, 247, 0.3);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         backdrop-filter: blur(10px);
         position: relative;
         overflow: hidden;
@@ -480,7 +480,7 @@ def local_css():
         left: 0;
         right: 0;
         bottom: 0;
-        background: linear-gradient(45deg, rgba(216, 180, 254, 0.05), rgba(192, 132, 252, 0.05));
+        background: linear-gradient(45deg, rgba(216, 180, 254, 0.02), rgba(192, 132, 252, 0.02));
         z-index: -1;
         border-radius: 20px;
     }
@@ -532,12 +532,12 @@ def local_css():
     }
     
     .image-container {
-        background: linear-gradient(145deg, rgba(216, 180, 254, 0.1), rgba(192, 132, 252, 0.1));
+        background: linear-gradient(145deg, rgba(40, 40, 40, 0.8), rgba(30, 30, 30, 0.8));
         border-radius: 20px;
         padding: 20px;
         margin: 20px 0;
-        border: 2px solid rgba(168, 85, 247, 0.2);
-        box-shadow: 0 10px 30px rgba(168, 85, 247, 0.1);
+        border: 2px solid rgba(168, 85, 247, 0.3);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         backdrop-filter: blur(10px);
         position: relative;
         overflow: hidden;
@@ -555,7 +555,7 @@ def local_css():
         left: 0;
         right: 0;
         bottom: 0;
-        background: linear-gradient(45deg, rgba(216, 180, 254, 0.05), rgba(192, 132, 252, 0.05));
+        background: linear-gradient(45deg, rgba(216, 180, 254, 0.02), rgba(192, 132, 252, 0.02));
         z-index: -1;
         border-radius: 20px;
     }
@@ -609,6 +609,76 @@ def local_css():
         -webkit-text-fill-color: transparent;
         font-size: 2.5rem;
         font-weight: 700;
+    }
+    
+    /* Streamlit button styling for dark theme */
+    .stButton > button {
+        background: linear-gradient(45deg, #7c3aed, #9333ea) !important;
+        color: white !important;
+        border: 1px solid rgba(168, 85, 247, 0.3) !important;
+        border-radius: 10px !important;
+        padding: 0.5rem 1rem !important;
+        font-family: 'Lato', sans-serif !important;
+        font-weight: 600 !important;
+        transition: all 0.3s ease !important;
+        box-shadow: 0 4px 15px rgba(124, 58, 237, 0.3) !important;
+    }
+    
+    .stButton > button:hover {
+        background: linear-gradient(45deg, #9333ea, #7c3aed) !important;
+        transform: translateY(-2px) !important;
+        box-shadow: 0 6px 20px rgba(124, 58, 237, 0.4) !important;
+        border-color: rgba(168, 85, 247, 0.5) !important;
+    }
+    
+    .stButton > button:active {
+        transform: translateY(0px) !important;
+        box-shadow: 0 2px 10px rgba(124, 58, 237, 0.3) !important;
+    }
+    
+    /* Form submit button styling */
+    .stFormSubmitButton > button {
+        background: linear-gradient(45deg, #7c3aed, #9333ea) !important;
+        color: white !important;
+        border: 1px solid rgba(168, 85, 247, 0.3) !important;
+        border-radius: 10px !important;
+        padding: 0.5rem 1rem !important;
+        font-family: 'Lato', sans-serif !important;
+        font-weight: 600 !important;
+        transition: all 0.3s ease !important;
+        box-shadow: 0 4px 15px rgba(124, 58, 237, 0.3) !important;
+    }
+    
+    .stFormSubmitButton > button:hover {
+        background: linear-gradient(45deg, #9333ea, #7c3aed) !important;
+        transform: translateY(-2px) !important;
+        box-shadow: 0 6px 20px rgba(124, 58, 237, 0.4) !important;
+        border-color: rgba(168, 85, 247, 0.5) !important;
+    }
+    
+    /* Text input styling for dark theme */
+    .stTextInput > div > div > input {
+        background-color: rgba(40, 40, 40, 0.8) !important;
+        color: #e0e0e0 !important;
+        border: 1px solid rgba(168, 85, 247, 0.3) !important;
+        border-radius: 8px !important;
+    }
+    
+    .stTextInput > div > div > input:focus {
+        border-color: rgba(168, 85, 247, 0.6) !important;
+        box-shadow: 0 0 10px rgba(168, 85, 247, 0.2) !important;
+    }
+    
+    /* Form styling */
+    .stForm {
+        background: rgba(30, 30, 30, 0.8) !important;
+        border: 1px solid rgba(168, 85, 247, 0.2) !important;
+        border-radius: 15px !important;
+        padding: 20px !important;
+    }
+    
+    .stForm > div {
+        background: transparent !important;
     }
     
     </style>
@@ -819,8 +889,8 @@ def main():
     if not st.session_state.authenticated:
         st.markdown("""
             <div class="premium-container" style="max-width: 500px; margin: 60px auto; text-align: center;">
-                <h2 style="font-family: 'Cormorant Garamond', serif; margin-bottom: 10px; color: #333;">🔒 Access Required</h2>
-                <p style="font-family: 'Lato', sans-serif; color: #666;">Enter the password to access Fatima's Graduation Celebration</p>
+                <h2 style="font-family: 'Cormorant Garamond', serif; margin-bottom: 10px; color: #e0e0e0;">🔒 Access Required</h2>
+                <p style="font-family: 'Lato', sans-serif; color: #b0b0b0;">Enter the password to access Fatima's Graduation Celebration</p>
             </div>
         """, unsafe_allow_html=True)
 
@@ -870,8 +940,8 @@ def main():
         if not access_granted:
             # Add footer
             st.markdown("""
-            <div style="text-align: center; margin-top: 50px; padding-top: 30px; border-top: 1px solid #eee;">
-                <p style="font-family: 'Montserrat', sans-serif; font-size: 0.9rem; color: #666;">
+            <div style="text-align: center; margin-top: 50px; padding-top: 30px; border-top: 1px solid #444;">
+                <p style="font-family: 'Montserrat', sans-serif; font-size: 0.9rem; color: #b0b0b0;">
                     Crafted with 💖 by your Bestie | 2025
                 </p>
             </div>
@@ -919,7 +989,7 @@ def main():
             <p style="font-family: 'Playfair Display', serif; font-size: 1.3rem; line-height: 1.8; color: #7c3aed; margin-bottom: 20px;">
                 {eid_message}
             </p>
-            <p style="font-family: 'Montserrat', sans-serif; font-size: 1.1rem; color: #666; margin-top: 30px;">
+            <p style="font-family: 'Montserrat', sans-serif; font-size: 1.1rem; color: #b0b0b0; margin-top: 30px;">
                 I'm so grateful for every moment we've shared as best friends. You're so cute, full of humor, and incredibly loyal. I love the child in you, Fatima (Famu) - it brings so much joy to our friendship. You're not just my friend, you're my best friend, and you're so good and loyal. Here's to more adventures, laughter, and bestie memories. Who would have thought you'd make it this far? Just kidding! 😂
             </p>
             <p class="rose-gold-text" style="text-align: right; font-size: 1.5rem; margin-top: 30px;">
@@ -947,8 +1017,8 @@ def main():
         col_index = i % 4  # Determine which column to place the memory
         with memory_cols[col_index]:
             st.markdown(f"""
-                <div style="background: linear-gradient(145deg, rgba(216, 180, 254, 0.1), rgba(192, 132, 252, 0.1)); border-radius: 25px; padding: 30px; box-shadow: 0 15px 35px rgba(168, 85, 247, 0.15), inset 0 0 25px rgba(255, 255, 255, 0.5); transform: rotate({random.uniform(-3, 3)}deg); margin: 20px 10px; min-height: 180px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(255, 255, 255, 0.3); backdrop-filter: blur(10px); transition: all 0.4s ease; cursor: pointer;" onmouseover="this.style.transform='scale(1.05) rotate({random.uniform(-2, 2)}deg)'; this.style.boxShadow='0 20px 40px rgba(168, 85, 247, 0.2), inset 0 0 35px rgba(255, 255, 255, 0.6)';" onmouseout="this.style.transform='scale(1) rotate({random.uniform(-3, 3)}deg)'; this.style.boxShadow='0 15px 35px rgba(168, 85, 247, 0.15), inset 0 0 25px rgba(255, 255, 255, 0.5)';">
-                    <p style="font-family: 'Lato', sans-serif; font-size: 1.2rem; background: linear-gradient(45deg, #d8b4fe, #c084fc); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-align: center; font-weight: 600; text-shadow: 2px 2px 4px rgba(0,0,0,0.05);">
+                <div style="background: linear-gradient(145deg, rgba(40, 40, 40, 0.8), rgba(30, 30, 30, 0.8)); border-radius: 25px; padding: 30px; box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3), inset 0 0 25px rgba(168, 85, 247, 0.1); transform: rotate({random.uniform(-3, 3)}deg); margin: 20px 10px; min-height: 180px; display: flex; align-items: center; justify-content: center; border: 1px solid rgba(168, 85, 247, 0.3); backdrop-filter: blur(10px); transition: all 0.4s ease; cursor: pointer;" onmouseover="this.style.transform='scale(1.05) rotate({random.uniform(-2, 2)}deg)'; this.style.boxShadow='0 20px 40px rgba(168, 85, 247, 0.3), inset 0 0 35px rgba(168, 85, 247, 0.2)';" onmouseout="this.style.transform='scale(1) rotate({random.uniform(-3, 3)}deg)'; this.style.boxShadow='0 15px 35px rgba(0, 0, 0, 0.3), inset 0 0 25px rgba(168, 85, 247, 0.1)';">
+                    <p style="font-family: 'Lato', sans-serif; font-size: 1.2rem; background: linear-gradient(45deg, #d8b4fe, #c084fc); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-align: center; font-weight: 600; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">
                         "{memory}"
                     </p>
                 </div>
@@ -998,7 +1068,7 @@ def main():
                     <div class="image-container">
                         <div style="font-size: 3rem; margin-bottom: 15px; text-align: center;">📷</div>
                         <div class="image-title">More Photos Coming Soon!</div>
-                        <p style="font-family: 'Montserrat', sans-serif; font-size: 0.9rem; color: #666; text-align: center;">
+                        <p style="font-family: 'Montserrat', sans-serif; font-size: 0.9rem; color: #b0b0b0; text-align: center;">
                             More beautiful memories with Famu to be added!
                         </p>
                     </div>
@@ -1050,7 +1120,7 @@ def main():
                         <div class="image-container">
                             <div style="font-size: 3rem; margin-bottom: 15px; text-align: center;">🔒</div>
                             <div class="image-title">Encrypted {image_item}</div>
-                            <p style="font-family: 'Montserrat', sans-serif; font-size: 0.9rem; color: #666; text-align: center;">
+                            <p style="font-family: 'Montserrat', sans-serif; font-size: 0.9rem; color: #b0b0b0; text-align: center;">
                                 Click decrypt to see beautiful Famu moments!
                             </p>
                         </div>
@@ -1061,7 +1131,7 @@ def main():
                     <div class="image-container">
                         <div style="font-size: 3rem; margin-bottom: 15px; text-align: center;">📸</div>
                         <div class="image-title">{image_item} - Coming Soon!</div>
-                        <p style="font-family: 'Montserrat', sans-serif; font-size: 0.9rem; color: #666; text-align: center;">
+                        <p style="font-family: 'Montserrat', sans-serif; font-size: 0.9rem; color: #b0b0b0; text-align: center;">
                             Beautiful Famu photo to be added!
                         </p>
                     </div>
@@ -1137,7 +1207,7 @@ def main():
                                 <div class="video-container">
                                     <div style="font-size: 3rem; margin-bottom: 15px; text-align: center;">🔒</div>
                                     <div class="video-title">Encrypted Video {video_idx + 1}</div>
-                                    <p style="font-family: 'Montserrat', sans-serif; font-size: 0.9rem; color: #666; text-align: center;">
+                                    <p style="font-family: 'Montserrat', sans-serif; font-size: 0.9rem; color: #b0b0b0; text-align: center;">
                                         Click decrypt to unlock Famu's cute moments!
                                     </p>
                                 </div>
