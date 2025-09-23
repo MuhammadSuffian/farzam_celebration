@@ -685,7 +685,7 @@ def local_css():
     """, unsafe_allow_html=True)
 
 # Security: password verification
-HASHED_PASSWORD = "ae7244fb185a9914fd8758c7a19bde4cc3bb9a524372a9f28d92070494812e74"
+HASHED_PASSWORD = "1d52cbd6dd2f7eb14e6b82b8d81474aa6d385b8e81a74e0edaf7ec74209bbb9e"
 
 def verify_password(plain_text: str) -> bool:
     try:
@@ -1057,7 +1057,7 @@ def main():
                 st.error("No password available")
     
     # Image container with 3 images in a row
-    image_files = ["Farzam1.jpg", "Farzam2.jpg", "Farzam3.jpg"]
+    image_files = ["Far1.jpg", "Far2.jpg", "Far3.jpg"]
     cols = st.columns(3)
     
     for col_idx, image_item in enumerate(image_files):
@@ -1069,7 +1069,7 @@ def main():
                         <div style="font-size: 3rem; margin-bottom: 15px; text-align: center;">📷</div>
                         <div class="image-title">More Photos Coming Soon!</div>
                         <p style="font-family: 'Montserrat', sans-serif; font-size: 0.9rem; color: #b0b0b0; text-align: center;">
-                            More beautiful memories with Famu to be added!
+                            More beautiful memories with Farzam to be added!
                         </p>
                     </div>
                 """, unsafe_allow_html=True)
@@ -1104,13 +1104,13 @@ def main():
                         # Display image in container
                         st.markdown(f"""
                             <div class="image-container">
-                                <div class="image-title">{image_item} - Beautiful Famu! 💜</div>
+                                <div class="image-title">{image_item} - Beautiful Farzam! 💜</div>
                             </div>
                         """, unsafe_allow_html=True)
                         
                         # Create PIL image from bytes for display
                         image = Image.open(io.BytesIO(decrypted_image_bytes))
-                        st.image(image, use_container_width=True, caption=f"Beautiful memories with Famu - {image_item}")
+                        st.image(image, use_container_width=True, caption=f"Beautiful memories with Farzam - {image_item}")
                         
                     except Exception as e:
                         st.error(f"Error loading {image_item}: {e}")
@@ -1121,7 +1121,7 @@ def main():
                             <div style="font-size: 3rem; margin-bottom: 15px; text-align: center;">🔒</div>
                             <div class="image-title">Encrypted {image_item}</div>
                             <p style="font-family: 'Montserrat', sans-serif; font-size: 0.9rem; color: #b0b0b0; text-align: center;">
-                                Click decrypt to see beautiful Famu moments!
+                                Click decrypt to see beautiful Farzam moments!
                             </p>
                         </div>
                     """, unsafe_allow_html=True)
@@ -1132,7 +1132,7 @@ def main():
                         <div style="font-size: 3rem; margin-bottom: 15px; text-align: center;">📸</div>
                         <div class="image-title">{image_item} - Coming Soon!</div>
                         <p style="font-family: 'Montserrat', sans-serif; font-size: 0.9rem; color: #b0b0b0; text-align: center;">
-                            Beautiful Famu photo to be added!
+                            Beautiful Farzam photo to be added!
                         </p>
                     </div>
                 """, unsafe_allow_html=True)
@@ -1189,7 +1189,7 @@ def main():
                                 # Display video in fixed container
                                 st.markdown(f"""
                                     <div class="video-container">
-                                        <div class="video-title">Video {video_idx + 1} - Cute Famu Moments! 💜</div>
+                                        <div class="video-title">Video {video_idx + 1} - Cute Farzam Moments! 💜</div>
                                         <div class="video-player">
                                 """, unsafe_allow_html=True)
                                 
@@ -1208,7 +1208,7 @@ def main():
                                     <div style="font-size: 3rem; margin-bottom: 15px; text-align: center;">🔒</div>
                                     <div class="video-title">Encrypted Video {video_idx + 1}</div>
                                     <p style="font-family: 'Montserrat', sans-serif; font-size: 0.9rem; color: #b0b0b0; text-align: center;">
-                                        Click decrypt to unlock Famu's cute moments!
+                                        Click decrypt to unlock Farzam's cute moments!
                                     </p>
                                 </div>
                             """, unsafe_allow_html=True)
@@ -1219,7 +1219,7 @@ def main():
                                 <div style="font-size: 3rem; margin-bottom: 15px; text-align: center;">📹</div>
                                 <div class="video-title">Video {video_idx + 1} - Coming Soon!</div>
                                 <p style="font-family: 'Montserrat', sans-serif; font-size: 0.9rem; color: #666; text-align: center;">
-                                    More cute Famu moments to be added!
+                                    More cute Farzam moments to be added!
                                 </p>
                             </div>
                         """, unsafe_allow_html=True)
