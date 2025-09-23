@@ -16,7 +16,7 @@ from cryptography.fernet import Fernet
 
 # Page configuration
 st.set_page_config(
-    page_title="🎉 Bestie Graduation Bash for AAMNA 🎉",
+    page_title="🎉 Bestie Graduation Bash for Farzam 🎉",
     page_icon="👯‍♀️",
     layout="wide",
     initial_sidebar_state="collapsed"
@@ -827,31 +827,31 @@ def generate_sparkles():
 # Premium graduation wishes templates
 def get_premium_eid_wishes():
     return [
-        "Bestie AAMNA (Anna), you did it! So proud of you and our 4+ years of amazing friendship. Happy Graduation from FUI! 🎓",
-        "To my favorite partner-in-crime, Anna: Congrats on graduating BSSE! You're so cute, have such good nature - the world better be ready for us! 😊",
-        "AAMNA, my best friend, you've worked so hard through Foundation University and I've loved every moment by your side. Your sweet nature brings so much joy!",
-        "We survived all-nighters, coffee runs, and endless BSSE assignments. Happy Graduation, Anna! You're amazing, my bestie! 😂",
-        "AAMNA (Anna), you're not just a graduate, you're my forever best friend. You're so cute and kind-hearted - let's celebrate like only we can!",
-        "From silly selfies to serious coding sessions at FUI, we did it all. Congrats, Anna! Though you're shorter than me, you're giant in my heart! 💖",
-        "Cheers to you, AAMNA! Couldn't have asked for a better best friend to share this BSSE journey with. You're so cute and sweet!",
-        "Besties forever! So proud of you, Anna. Happy Graduation from Foundation University! Your good nature and cuteness are unmatched! �"
+        "Bestie Farzam, you did it! So proud of you and our 4+ years of amazing friendship. Happy Graduation from FUI! 🎓",
+        "To my favorite partner-in-crime, Farzam: Congrats on graduating BSSE! You're so cute, have such good nature - the world better be ready for us! 😊",
+        "Farzam, my best friend, you've worked so hard through Foundation University and I've loved every moment by your side. Your sweet nature brings so much joy!",
+        "We survived all-nighters, coffee runs, and endless BSSE assignments. Happy Graduation, Farzam! You're amazing, my bestie! 😂",
+        "Farzam, you're not just a graduate, you're my forever best friend. You're so cute and kind-hearted - let's celebrate like only we can!",
+        "From silly selfies to serious coding sessions at FUI, we did it all. Congrats, Farzam! Though you're shorter than me, you're giant in my heart! 💖",
+        "Cheers to you, Farzam! Couldn't have asked for a better best friend to share this BSSE journey with. You're so cute and sweet!",
+        "Besties forever! So proud of you, Farzam. Happy Graduation from Foundation University! Your good nature and cuteness are unmatched! 💖"
     ]
 
 # Function to create fancy text with sparkle animation
 def fancy_header(text, element_class="shimmer-text", tag="h1"):
     return f'<{tag} class="{element_class}">{text}</{tag}>'
 
-# Personal memories and quotes for Fatima (Famu)
+# Personal memories and quotes for Farzam
 def get_personal_memories():
     return [
-        "Our legendary late-night study sessions (and snack attacks) - you're so cute, Famu!",
-        "Laughing until we cried over the silliest things - your humor is the best, Fatima!",
+        "Our legendary late-night study sessions (and snack attacks) - you're so cute, Farzam!",
+        "Laughing until we cried over the silliest things - your humor is the best, Farzam!",
         "Taking goofy graduation cap selfies together - I love the child in you, bestie!",
         "Cheering each other on through every exam and meltdown - you're so good and loyal!",
         "Our secret bestie handshake before big presentations - you're my best friend forever!",
         "Dancing in the dorm room after good news - you're so cute and full of humor!",
-        "All the inside jokes only we understand, Bestie! You're so good and loyal, Famu!",
-        "Dreaming about our future adventures together - I love your child-like spirit, Fatima!"
+        "All the inside jokes only we understand, Bestie! You're so good and loyal, Farzam!",
+        "Dreaming about our future adventures together - I love your child-like spirit, Farzam!"
     ]
 
 # Check if today is Eid
@@ -890,7 +890,7 @@ def main():
         st.markdown("""
             <div class="premium-container" style="max-width: 500px; margin: 60px auto; text-align: center;">
                 <h2 style="font-family: 'Cormorant Garamond', serif; margin-bottom: 10px; color: #e0e0e0;">🔒 Access Required</h2>
-                <p style="font-family: 'Lato', sans-serif; color: #b0b0b0;">Enter the password to access AAMNA's Graduation Celebration</p>
+                <p style="font-family: 'Lato', sans-serif; color: #b0b0b0;">Enter the password to access Farzam's Graduation Celebration</p>
             </div>
         """, unsafe_allow_html=True)
 
@@ -909,7 +909,7 @@ def main():
             st.stop()
 
     st.sidebar.markdown("### Bestie Graduation Bash!")
-    st.sidebar.markdown("**Honoring:** AAMNA (a.k.a. Anna �)")
+    st.sidebar.markdown("**Honoring:** Farzam 💖")
     st.sidebar.markdown("**From:** Your Best Friend 💖")
     timezone = pytz.timezone('Asia/Karachi')
     current_time = datetime.now(timezone)
@@ -957,13 +957,13 @@ def main():
             st.markdown(f"""
 <div class="premium-container reflection" style="text-align: center; background: linear-gradient(135deg, rgba(74, 144, 226, 0.1) 0%, rgba(155, 89, 182, 0.1) 100%);">
     <span class="graduation-cap">🎓</span>
-    {fancy_header("Celebrating AAMNA's Graduation!", "shimmer-text")}
+    {fancy_header("Celebrating Farzam's Graduation!", "shimmer-text")}
     <div style="margin: 20px 0;">
         <span class="graduation-emoji">📚</span>
         <span class="diploma">📜</span>
         <span class="graduation-emoji">🎊</span>
     </div>
-    <p class="elegant-wish">A Journey of Excellence, A Future of Promise for Anna 🎓✨</p>
+    <p class="elegant-wish">A Journey of Excellence, A Future of Promise for Farzam 🎓✨</p>
 </div>
 """, unsafe_allow_html=True)
     
@@ -984,13 +984,13 @@ def main():
     st.markdown(f"""
         <div class="message-card">
             <h2 style="font-family: 'Montserrat', sans-serif; font-weight: 600; margin-bottom: 20px; color: #9333ea;">
-                Dear Bestie AAMNA (Anna),
+                Dear Bestie Farzam,
             </h2>
             <p style="font-family: 'Playfair Display', serif; font-size: 1.3rem; line-height: 1.8; color: #7c3aed; margin-bottom: 20px;">
                 {eid_message}
             </p>
             <p style="font-family: 'Montserrat', sans-serif; font-size: 1.1rem; color: #b0b0b0; margin-top: 30px;">
-                I'm so grateful for every moment we've shared as best friends for over 4 years! You're so cute, have such good nature, and though you're a bit shorter than me, you have the biggest heart! Our journey through BSSE at Foundation University Islamabad has been amazing together. You're not just my friend, you're my best friend AAMNA (Anna), and I couldn't be prouder of us graduating together! Here's to more adventures and bestie memories. Who knew our FUI days would fly by so fast! �
+                I'm so grateful for every moment we've shared as best friends for over 4 years! You're so cute, have such good nature, and though you're a bit shorter than me, you have the biggest heart! Our journey through BSSE at Foundation University Islamabad has been amazing together. You're not just my friend, you're my best friend Farzam, and I couldn't be prouder of us graduating together! Here's to more adventures and bestie memories. Who knew our FUI days would fly by so fast! 💖
             </p>
             <p class="rose-gold-text" style="text-align: right; font-size: 1.5rem; margin-top: 30px;">
                 Besties Forever! 💖
@@ -1031,7 +1031,7 @@ def main():
     # Image section
     st.markdown("""
         <h3 class="images-section-title">
-            📸 Beautiful Memories with Anna 📸
+            📸 Beautiful Memories with Farzam 📸
         </h3>
     """, unsafe_allow_html=True)
     
@@ -1041,7 +1041,7 @@ def main():
         if st.button("🔓 Decrypt All Images", key="decrypt_all_images", use_container_width=True):
             password = st.session_state.get('user_password', '')
             if password:
-                image_files = ["Anna1.jpg", "Anna2.jpg","Anna3.jpg"]
+                image_files = ["Farzam1.jpg", "Farzam2.jpg","Farzam3.jpg"]
                 for i, image_file in enumerate(image_files):
                     image_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), image_file)
                     if os.path.exists(image_path):
@@ -1057,7 +1057,7 @@ def main():
                 st.error("No password available")
     
     # Image container with 3 images in a row
-    image_files = ["Anna1.jpg", "Anna2.jpg", "Anna3.jpg"]
+    image_files = ["Farzam1.jpg", "Farzam2.jpg", "Farzam3.jpg"]
     cols = st.columns(3)
     
     for col_idx, image_item in enumerate(image_files):
@@ -1140,7 +1140,7 @@ def main():
     # Video section
     st.markdown("""
         <h3 style="font-family: 'Cormorant Garamond', serif; text-align: center; margin: 60px 0 30px; background: linear-gradient(45deg, #d8b4fe, #c084fc); -webkit-background-clip: text; -webkit-text-fill-color: transparent; font-size: 2.5rem; font-weight: 700;">
-            🎬 Featuring Cute Anna in Cute Videos 🎬
+            🎬 Featuring Cute Farzam in Cute Videos 🎬
         </h3>
     """, unsafe_allow_html=True)
     
@@ -1227,7 +1227,7 @@ def main():
     # Interactive "gift" - digital birthday cake
     st.markdown("""
         <h3 style="font-family: 'Playfair Display', serif; text-align: center; margin: 40px 0 20px; color: #7c3aed;">
-            Bestie Vibes Only - Anna & Me Forever!
+            Bestie Vibes Only - Farzam & Me Forever!
         </h3>
         
         <div style="text-align: center; margin: 40px 0;">
@@ -1244,11 +1244,11 @@ def main():
        <style>
         <div class="premium-container" style="text-align: center; max-width: 600px; margin: 30px auto; background: linear-gradient(135deg, rgba(251, 194, 235, 0.8) 0%, rgba(249, 213, 236, 0.8) 100%); border: 1px solid rgba(255, 255, 255, 0.3); box-shadow: 0 20px 40px rgba(0,0,0,0.1), inset 0 0 60px rgba(255, 255, 255, 0.5);">
             <h3 style="font-family: 'Dancing Script', cursive; font-size: 3rem; color: #9333ea; margin: 20px 0;">
-                Bestie Graduation Bash for AAMNA!
+                Bestie Graduation Bash for Farzam!
             </h3>
             
              <p style="font-family: 'Montserrat', sans-serif; font-size: 1.2rem; color: #7c3aed; margin-bottom: 40px;">
-                 Love you forever, Anna! You're so cute, have such good nature, and though you're shorter than me, you're the tallest in my heart! My best friend from Foundation University Islamabad! Here's to your big day and all our future adventures after BSSE! 👯‍♀️💖 You're amazing - who would have thought our 4+ years of friendship would lead us both to graduation together? �
+                 Love you forever, Farzam! You're so cute, have such good nature, and though you're shorter than me, you're the tallest in my heart! My best friend from Foundation University Islamabad! Here's to your big day and all our future adventures after BSSE! 👯‍♀️💖 You're amazing - who would have thought our 4+ years of friendship would lead us both to graduation together? 💖
              </p>
     </div>
                 </style>
@@ -1287,7 +1287,7 @@ def main():
             </h3>
             <div class="premium-container" style="background: linear-gradient(to right, #e9d5ff, #ddd6fe); text-align: center; padding: 30px;">
                  <p style="font-family: 'Dancing Script', cursive; font-size: 1.8rem; color: #7c3aed;">
-                     "AAMNA (Anna), you're not just a graduate, you're my best friend for life! Over 4 years of friendship through Foundation University Islamabad BSSE program. You're so cute, have such good nature, and though you're shorter than me, you're perfect! Congrats and let's celebrate! Remember our coding marathons at FUI? 😊"
+                     "Farzam, you're not just a graduate, you're my best friend for life! Over 4 years of friendship through Foundation University Islamabad BSSE program. You're so cute, have such good nature, and though you're shorter than me, you're perfect! Congrats and let's celebrate! Remember our coding marathons at FUI? 😊"
                  </p>
             </div>
         </div>
