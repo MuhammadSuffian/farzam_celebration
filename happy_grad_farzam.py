@@ -1146,8 +1146,8 @@ def main():
     
     # Video container with 2 rows of 3 videos each
     video_files = [
-        "famu1.mp4", "famu2.mp4", "famu3.mp4",
-        "famu4.mp4", "famu5.mp4", "famu6.mp4"
+        "far1.mp4", "far2.mp4", "far3.mp4",
+        "far4.mp4", "far5.mp4", "far6.mp4"
     ]
     
     # Create two rows of videos
