@@ -1037,24 +1037,24 @@ def main():
     
     # Decrypt all images button
     col1, col2, col3 = st.columns([1, 2, 1])
-    with col2:
-        if st.button("🔓 Decrypt All Images", key="decrypt_all_images", use_container_width=True):
-            password = st.session_state.get('user_password', '')
-            if password:
-                image_files = ["Farzam1.jpg", "Farzam2.jpg","Farzam3.jpg"]
-                for i, image_file in enumerate(image_files):
-                    image_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), image_file)
-                    if os.path.exists(image_path):
-                        image_key = f"image_{i}"
-                        with st.spinner(f"Decrypting {image_file}..."):
-                            decrypted_bytes = decrypt_image(image_path, password)
-                            if decrypted_bytes:
-                                st.session_state[f"decrypted_{image_key}"] = decrypted_bytes
-                                st.success(f"{image_file} decrypted successfully!")
-                            else:
-                                st.error(f"Failed to decrypt {image_file}")
-            else:
-                st.error("No password available")
+    # with col2:
+    #     if st.button("🔓 Decrypt All Images", key="decrypt_all_images", use_container_width=True):
+    #         password = st.session_state.get('user_password', '')
+    #         if password:
+    #             image_files = ["Farzam1.jpg", "Farzam2.jpg","Farzam3.jpg"]
+    #             for i, image_file in enumerate(image_files):
+    #                 image_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), image_file)
+    #                 if os.path.exists(image_path):
+    #                     image_key = f"image_{i}"
+    #                     with st.spinner(f"Decrypting {image_file}..."):
+    #                         decrypted_bytes = decrypt_image(image_path, password)
+    #                         if decrypted_bytes:
+    #                             st.session_state[f"decrypted_{image_key}"] = decrypted_bytes
+    #                             st.success(f"{image_file} decrypted successfully!")
+    #                         else:
+    #                             st.error(f"Failed to decrypt {image_file}")
+    #         else:
+    #             st.error("No password available")
     
     # Image container with 3 images in a row
     image_files = ["Far1.jpg", "Far2.jpg", "Far3.jpg"]
