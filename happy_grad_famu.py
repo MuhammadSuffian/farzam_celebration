@@ -531,6 +531,86 @@ def local_css():
         box-shadow: 0 6px 20px rgba(168, 85, 247, 0.4);
     }
     
+    .image-container {
+        background: linear-gradient(145deg, rgba(216, 180, 254, 0.1), rgba(192, 132, 252, 0.1));
+        border-radius: 20px;
+        padding: 20px;
+        margin: 20px 0;
+        border: 2px solid rgba(168, 85, 247, 0.2);
+        box-shadow: 0 10px 30px rgba(168, 85, 247, 0.1);
+        backdrop-filter: blur(10px);
+        position: relative;
+        overflow: hidden;
+        min-height: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .image-container::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(45deg, rgba(216, 180, 254, 0.05), rgba(192, 132, 252, 0.05));
+        z-index: -1;
+        border-radius: 20px;
+    }
+    
+    .image-display {
+        width: 100%;
+        max-width: 250px;
+        border-radius: 15px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+    }
+    
+    .image-title {
+        font-family: 'Lato', sans-serif;
+        font-size: 1.2rem;
+        color: #7c3aed;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 15px;
+        background: linear-gradient(45deg, #d8b4fe, #c084fc);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    
+    .image-btn {
+        background: linear-gradient(45deg, #d8b4fe, #c084fc);
+        color: white;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 20px;
+        font-family: 'Lato', sans-serif;
+        font-weight: 600;
+        font-size: 0.9rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(168, 85, 247, 0.3);
+        margin-top: 15px;
+    }
+    
+    .image-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(168, 85, 247, 0.4);
+    }
+    
+    .images-section-title {
+        font-family: 'Cormorant Garamond', serif;
+        text-align: center;
+        margin: 60px 0 30px;
+        background: linear-gradient(45deg, #d8b4fe, #c084fc);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 2.5rem;
+        font-weight: 700;
+    }
+    
     </style>
     """, unsafe_allow_html=True)
 
@@ -576,6 +656,25 @@ def decrypt_video(encrypted_video_path, password, output_path=None):
         
     except Exception as e:
         print(f"Error decrypting video: {e}")
+        return None
+
+def decrypt_image(encrypted_image_path, password, output_path=None):
+    """Decrypt an image file"""
+    try:
+        # Generate key from password
+        fernet = generate_key_from_password(password)
+        
+        # Read the encrypted image file
+        with open(encrypted_image_path, 'rb') as file:
+            encrypted_data = file.read()
+        
+        # Decrypt the image data
+        decrypted_data = fernet.decrypt(encrypted_data)
+        print(f"Image decrypted successfully! Saved as: {output_path}")
+        return(decrypted_data)
+        
+    except Exception as e:
+        print(f"Error decrypting image: {e}")
         return None
 
 def get_video_password():
@@ -858,6 +957,115 @@ def main():
     st.markdown("""
         </div>
     """, unsafe_allow_html=True)
+    
+    # Image section
+    st.markdown("""
+        <h3 class="images-section-title">
+            📸 Beautiful Memories with Famu 📸
+        </h3>
+    """, unsafe_allow_html=True)
+    
+    # Decrypt all images button
+    col1, col2, col3 = st.columns([1, 2, 1])
+    with col2:
+        if st.button("🔓 Decrypt All Images", key="decrypt_all_images", use_container_width=True):
+            password = st.session_state.get('user_password', '')
+            if password:
+                image_files = ["Famu1.jpg", "Famu2.jpg","Famu3.jpg"]
+                for i, image_file in enumerate(image_files):
+                    image_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), image_file)
+                    if os.path.exists(image_path):
+                        image_key = f"image_{i}"
+                        with st.spinner(f"Decrypting {image_file}..."):
+                            decrypted_bytes = decrypt_image(image_path, password)
+                            if decrypted_bytes:
+                                st.session_state[f"decrypted_{image_key}"] = decrypted_bytes
+                                st.success(f"{image_file} decrypted successfully!")
+                            else:
+                                st.error(f"Failed to decrypt {image_file}")
+            else:
+                st.error("No password available")
+    
+    # Image container with 3 images in a row
+    image_files = ["Famu1.jpg", "Famu2.jpg", "Famu3.jpg"]
+    cols = st.columns(3)
+    
+    for col_idx, image_item in enumerate(image_files):
+        with cols[col_idx]:
+            if image_item == "Coming Soon":
+                # Placeholder for third image
+                st.markdown(f"""
+                    <div class="image-container">
+                        <div style="font-size: 3rem; margin-bottom: 15px; text-align: center;">📷</div>
+                        <div class="image-title">More Photos Coming Soon!</div>
+                        <p style="font-family: 'Montserrat', sans-serif; font-size: 0.9rem; color: #666; text-align: center;">
+                            More beautiful memories with Famu to be added!
+                        </p>
+                    </div>
+                """, unsafe_allow_html=True)
+                continue
+            
+            image_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), image_item)
+            image_key = f"image_{col_idx}"
+            
+            # Initialize session state for this image
+            if f"decrypted_{image_key}" not in st.session_state:
+                st.session_state[f"decrypted_{image_key}"] = None
+            
+            if os.path.exists(image_path):
+                # Individual decrypt button for each image
+                if st.button(f"🔓 Decrypt {image_item}", key=f"decrypt_{image_key}"):
+                    password = st.session_state.get('user_password', '')
+                    if password:
+                        with st.spinner(f"Decrypting {image_item}..."):
+                            decrypted_bytes = decrypt_image(image_path, password)
+                            if decrypted_bytes:
+                                st.session_state[f"decrypted_{image_key}"] = decrypted_bytes
+                                st.success(f"{image_item} decrypted successfully!")
+                            else:
+                                st.error(f"Failed to decrypt {image_item}")
+                    else:
+                        st.error("No password available")
+                
+                # Display image if decrypted
+                if st.session_state[f"decrypted_{image_key}"]:
+                    decrypted_image_bytes = st.session_state[f"decrypted_{image_key}"]
+                    try:
+                        # Display image in container
+                        st.markdown(f"""
+                            <div class="image-container">
+                                <div class="image-title">{image_item} - Beautiful Famu! 💜</div>
+                            </div>
+                        """, unsafe_allow_html=True)
+                        
+                        # Create PIL image from bytes for display
+                        image = Image.open(io.BytesIO(decrypted_image_bytes))
+                        st.image(image, use_container_width=True, caption=f"Beautiful memories with Famu - {image_item}")
+                        
+                    except Exception as e:
+                        st.error(f"Error loading {image_item}: {e}")
+                else:
+                    # Placeholder for encrypted image
+                    st.markdown(f"""
+                        <div class="image-container">
+                            <div style="font-size: 3rem; margin-bottom: 15px; text-align: center;">🔒</div>
+                            <div class="image-title">Encrypted {image_item}</div>
+                            <p style="font-family: 'Montserrat', sans-serif; font-size: 0.9rem; color: #666; text-align: center;">
+                                Click decrypt to see beautiful Famu moments!
+                            </p>
+                        </div>
+                    """, unsafe_allow_html=True)
+            else:
+                # Placeholder for missing image file
+                st.markdown(f"""
+                    <div class="image-container">
+                        <div style="font-size: 3rem; margin-bottom: 15px; text-align: center;">📸</div>
+                        <div class="image-title">{image_item} - Coming Soon!</div>
+                        <p style="font-family: 'Montserrat', sans-serif; font-size: 0.9rem; color: #666; text-align: center;">
+                            Beautiful Famu photo to be added!
+                        </p>
+                    </div>
+                """, unsafe_allow_html=True)
     
     # Video section
     st.markdown("""
