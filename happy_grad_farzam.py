@@ -832,7 +832,7 @@ def get_premium_eid_wishes():
         "Farzam, my best friend, you've worked so hard through Foundation University and I've loved every moment by your side. Your sweet nature brings so much joy!",
         "We survived all-nighters, coffee runs, and endless BSSE assignments. Happy Graduation, Farzam! You're amazing, my bestie! 😂",
         "Farzam, you're not just a graduate, you're my forever best friend. You're so cute and kind-hearted - let's celebrate like only we can!",
-        "From silly selfies to serious coding sessions at FUI, we did it all. Congrats, Farzam! Though you're shorter than me, you're giant in my heart! 💖",
+        "From silly selfies to serious coding sessions at FUI, we did it all. Congrats, Farzam! Though you're Taller than me, you're giant in my heart! 💖",
         "Cheers to you, Farzam! Couldn't have asked for a better best friend to share this BSSE journey with. You're so cute and sweet!",
         "Besties forever! So proud of you, Farzam. Happy Graduation from Foundation University! Your good nature and cuteness are unmatched! 💖"
     ]
@@ -990,7 +990,7 @@ def main():
                 {eid_message}
             </p>
             <p style="font-family: 'Montserrat', sans-serif; font-size: 1.1rem; color: #b0b0b0; margin-top: 30px;">
-                I'm so grateful for every moment we've shared as best friends for over 4 years! You're so cute, have such good nature, and though you're a bit shorter than me, you have the biggest heart! Our journey through BSSE at Foundation University Islamabad has been amazing together. You're not just my friend, you're my best friend Farzam, and I couldn't be prouder of us graduating together! Here's to more adventures and bestie memories. Who knew our FUI days would fly by so fast! 💖
+                I'm so grateful for every moment we've shared as best friends for over 4 years! You're so cute, have such good nature, and though you're a bit Taller than me, you have the biggest heart! Our journey through BSSE at Foundation University Islamabad has been amazing together. You're not just my friend, you're my best friend Farzam, and I couldn't be prouder of us graduating together! Here's to more adventures and bestie memories. Who knew our FUI days would fly by so fast! 💖
             </p>
             <p class="rose-gold-text" style="text-align: right; font-size: 1.5rem; margin-top: 30px;">
                 Besties Forever! 💖
@@ -1248,7 +1248,7 @@ def main():
             </h3>
             
              <p style="font-family: 'Montserrat', sans-serif; font-size: 1.2rem; color: #7c3aed; margin-bottom: 40px;">
-                 Love you forever, Farzam! You're so cute, have such good nature, and though you're shorter than me, you're the tallest in my heart! My best friend from Foundation University Islamabad! Here's to your big day and all our future adventures after BSSE! 👯‍♀️💖 You're amazing - who would have thought our 4+ years of friendship would lead us both to graduation together? 💖
+                 Love you forever, Farzam! You're so cute, have such good nature, and though you're Taller than me, you're the tallest in my heart! My best friend from Foundation University Islamabad! Here's to your big day and all our future adventures after BSSE! 👯‍♀️💖 You're amazing - who would have thought our 4+ years of friendship would lead us both to graduation together? 💖
              </p>
     </div>
                 </style>
