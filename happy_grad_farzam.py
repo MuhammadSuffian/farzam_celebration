@@ -1287,7 +1287,7 @@ def main():
             </h3>
             <div class="premium-container" style="background: linear-gradient(to right, #e9d5ff, #ddd6fe); text-align: center; padding: 30px;">
                  <p style="font-family: 'Dancing Script', cursive; font-size: 1.8rem; color: #7c3aed;">
-                     "Farzam, you're not just a graduate, you're my best friend for life! Over 4 years of friendship through Foundation University Islamabad BSSE program. You're so cute, have such good nature, and though you're shorter than me, you're perfect! Congrats and let's celebrate! Remember our coding marathons at FUI? 😊"
+                     "Farzam, you're not just a graduate, you're my best friend for life! Over 4 years of friendship through Foundation University Islamabad BSSE program. You're so cute, have such good nature, and though you're Taller than me, you're perfect! Congrats and let's celebrate! Remember our coding marathons at FUI? 😊"
                  </p>
             </div>
         </div>
