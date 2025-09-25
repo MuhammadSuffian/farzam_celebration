@@ -1265,7 +1265,7 @@ def main():
                     Bestie, you're a star!
                 </h3>
                 <p style="font-family: 'Montserrat', sans-serif; font-size: 1.1rem; color: #7c3aed;">
-                    Here's to us, to you, and to all the memories we'll make. Love you, Fatima!
+                    Here's to us, to you, and to all the memories we'll make. Love you, Farzam!
                 </p>
                 <div style="font-size: 50px; margin: 20px 0;">
                     <span class="graduation-emoji">👯‍♀️</span>
